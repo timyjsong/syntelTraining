@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+		<property name="DriverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="username" value="system"/>
+		<property name="password" value="syntel123$"/>
+	</bean>
+	
+	<bean id="jtemp" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"/>
+	</bean>
+
+	
+
+	<bean class="pkg.MyInterceptor"/>
+
+	<bean id="proxy_emp" class="org.springframework.framework.ProxyFactoryBean">
+		<property name="target" ref="emp"/>
+		<property name="interceptorNames">
+			<list>
+				<value>mylog</value>
+				<value>myexception</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id ="mylog" class="aop.LogClass"/>
+	
+
+	<bean id="add" class="pkg.Address">
+		<constructor-arg index="0" value="ABC"/>
+		<constructor-arg index="1" value="AZ"/>
+		<constructor-arg index="2" value="85027"/>
+	</bean>
+
+	<bean id="emp" class="pkg.Employee" autowire="byName">
+		<property name="eid" value="9001"/>
+		<property name="ename" value="John"/>
+		<property name="ecity" value="Phoenix"/>
+		<property name="esalary" value="60000"/>
+		<property name="address" ref="add"/>	
+		<property name="hobbies">
+			<list>
+				<value>PPP</value>
+				<value>PVG</value>
+				<value>Rafting</value>
+			</list>				
+		</property>
+	</bean>
+	
+</beans>

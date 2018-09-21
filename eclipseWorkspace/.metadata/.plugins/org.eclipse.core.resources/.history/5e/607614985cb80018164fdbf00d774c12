@@ -1,0 +1,55 @@
+package rms.dao;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import rms.mapper.LocationResourceMapper;
+import rms.model.LocationResourceModel;
+
+import java.util.List;
+
+public class LocationResourceDAO {
+    private JdbcTemplate temp;
+
+    public LocationResourceDAO(){
+        temp = Connection.getConnection();
+    }
+    
+    // Return the next available ID for insert
+    public int getNextAvailableKey() {
+    	Integer keyInc = (Integer)temp.queryForObject("select MAX(locResId) from LocationResource",Integer.class);
+    	if(keyInc == null) 
+    		return 1;
+    	else
+    		return keyInc+1;
+    }
+    
+    // Return LocationResourceModel with specified locationResourceID
+    public LocationResourceModel getLocation(int locResId) {
+    	return (LocationResourceModel)temp.queryForObject("Select * from Location where locId = ?", new LocationResourceMapper(), locId);
+    }
+    
+    // Inserts specified LocationResource into LocationResource table
+    public int insertLocation(LocationResourceModel locRes) {
+    	return temp.update("insert into LocationResource values(?,?,?,?,?,?,1)",
+    			new LocationResourceDAO().getNextAvailableKey(), loc.getLocName(), loc.getLocCity(), loc.getLocState(), loc.getLocAddress(), loc.getDescription());
+    }
+	
+    // Updates isActive column entry to 0 to the specified LocationResource from LocationResource table
+    public int deleteLocation(LocationResourceModel locRes) {
+    	return temp.update("update LocationResource set isActive = 0 where locId = ?", loc.getLocId());
+    }
+	
+    // Updates specified LocationResource from LocationResource table
+    public int updateLocation(LocationResourceModel locRes) {
+    	return temp.update("update LocationResource set locName = ?, locCity = ?, locState =?, locAddress = ?, description = ? where locId = ?)",
+    			loc.getLocName(), loc.getLocCity(), loc.getLocState(), loc.getLocAddress(), loc.getDescription(), loc.getLocId());
+    }
+    
+    // Returns a list of LocationResourceModel from LocationResource table
+    public List<LocationResourceModel> getAllLocations() {
+    	return temp.query("select * from LocationResource", new LocationResourceMapper());
+    }
+
+}

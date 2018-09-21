@@ -1,0 +1,5 @@
+package rms.mapper;
+
+public class DateTimeRangeMapper {
+
+}

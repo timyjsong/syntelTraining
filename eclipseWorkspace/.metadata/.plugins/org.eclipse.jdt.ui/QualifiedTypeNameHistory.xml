@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="operation.loyaltyCard"/>
+<fullyQualifiedTypeName name="exceptions.PhoneContainsTextException"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.config.BeanPostProcessor"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="rms.model.VisitorsModel"/>
+<fullyQualifiedTypeName name="rms.dao.ResourceFeatureDAO"/>
+<fullyQualifiedTypeName name="rms.dao.BookingDAO"/>
+<fullyQualifiedTypeName name="rms.dao.FeatureDAO"/>
+<fullyQualifiedTypeName name="rms.dao.InvitationDAO"/>
+<fullyQualifiedTypeName name="rms.dao.LocationDAO"/>
+<fullyQualifiedTypeName name="rms.dao.ResourceDAO"/>
+<fullyQualifiedTypeName name="rms.dao.ResourceTypeDAO"/>
+<fullyQualifiedTypeName name="rms.dao.UserDAO"/>
+<fullyQualifiedTypeName name="rms.dao.VisitorDAO"/>
+<fullyQualifiedTypeName name="rms.dao.LocationResourceDAO"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="javax.swing.tree.RowMapper"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
+<fullyQualifiedTypeName name="rms.model.DateTimeRangeModel"/>
+<fullyQualifiedTypeName name="rms.model.BookingRangeModel"/>
+<fullyQualifiedTypeName name="rms.mapper.BookingRangeMapper"/>
+<fullyQualifiedTypeName name="rms.model.FeatureModel"/>
+<fullyQualifiedTypeName name="rms.model.ResourceFeatureModel"/>
+<fullyQualifiedTypeName name="rms.mapper.ResourceFeatureMapper"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+</qualifiedTypeNameHistroy>

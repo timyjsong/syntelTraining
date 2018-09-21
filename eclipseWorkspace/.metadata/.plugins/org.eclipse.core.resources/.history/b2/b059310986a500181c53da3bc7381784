@@ -1,0 +1,87 @@
+package bank;
+
+import java.util.Scanner;
+
+public class MyApp {
+	
+	public static void main(String s[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		Customer custArray[] = new Customer[10];
+		int custCount = 0;
+		
+		int custId;
+		String custName;
+		String custPhone;
+		String custCity;
+		
+		int accId;
+		double accBalance;
+		float interestRate;
+		
+		System.out.println("Would you like to enter a new customer? (yes/no)");
+		String custCreate = sc.next();
+		while(custCreate == "y") {
+			SavingAccount accountObject = new SavingAccount();
+			
+			System.out.println("Scan Customer Details . . .");
+			System.out.println("Scan ID . . .");
+			custId = sc.nextInt();
+			
+			System.out.println("Scan Name . . .");
+			custName = sc.next();
+			
+			System.out.println("Scan Phone . . .");
+			custPhone = sc.next();
+			
+			System.out.println("Scan City . . .");
+			custCity = sc.next();
+			
+			System.out.println("Scan Customer Account Details . . .");
+			System.out.println("Scan AccID . . .");
+			accId = sc.nextInt();
+			
+			System.out.println("Scan Balance . . .");
+			accBalance = sc.nextDouble();
+			
+			System.out.println("Scan Interest Rate . . .");
+			interestRate = sc.nextFloat();
+			
+			accountObject.storeAccountDetails(accId, accBalance, interestRate);
+			custArray[custCount].storeCustomerDetails(custId, custName, custPhone, custCity, accountObject);
+			
+			custCount++;
+			
+			System.out.println("Would you like to enter a new customer? (yes/no)");
+			custCreate = sc.next();
+		}
+			
+		
+		
+		
+		for(int i = 0; i < custArray.length; i++) {
+			custArray[i].displayCustomerDetails();			
+		}
+
+		/*
+		//-------------------TRANSACTION--------------------
+		System.out.println("-----TRANSACTION-----");
+		System.out.println("----LOGIN PROCESS----");
+		System.out.println("Enter Username:");
+		String username = sc.next();
+		System.out.println("Enter Password:");
+		String password = sc.next();
+		
+		if(MySecurity.isUserValid(username, password)) {
+			System.out.println("Withdraw $500 function check----");
+			TransactionServices tranServices = new TransactionServices();
+			tranServices.cashWithdraw(cust, 500);
+			cust.displayCustomerDetails();
+		}
+		else
+			System.out.println("LOGIN FAILED . . . . . .");
+			
+			*/
+		
+	}
+}

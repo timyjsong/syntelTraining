@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\Users\syntel\Desktop\eclipseWorkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2032227073.index
+2390481311.index
+414574486.index
+989118019.index
+459569442.index
+3077160361.index
+1294038453.index
+1777532865.index
+1325756174.index

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="119" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+    <groups>
+      <group name="add">
+        <method signature="NewTestNG.xtest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="xtest" class="mytest.NewTestNG"/>
+        <method signature="NewTestNG.ztest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="ztest" class="mytest.NewTestNG"/>
+        <method signature="NewTestNG.ytest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="ytest" class="mytest.NewTestNG"/>
+      </group> <!-- add -->
+      <group name="apple">
+        <method signature="NewTestNG.ztest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="ztest" class="mytest.NewTestNG"/>
+        <method signature="NewTestNG.ytest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="ytest" class="mytest.NewTestNG"/>
+      </group> <!-- apple -->
+      <group name="sub">
+        <method signature="NewTestNG.subTest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="subTest" class="mytest.NewTestNG"/>
+      </group> <!-- sub -->
+      <group name="mango">
+        <method signature="NewTestNG.xtest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="xtest" class="mytest.NewTestNG"/>
+        <method signature="NewTestNG.ztest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="ztest" class="mytest.NewTestNG"/>
+      </group> <!-- mango -->
+    </groups>
+    <test name="Test" duration-ms="119" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+      <class name="mytest.NewTestNG">
+        <test-method status="PASS" signature="bf()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="bf" is-config="true" duration-ms="13" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bf -->
+        <test-method status="PASS" signature="bf()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="bf" is-config="true" duration-ms="11" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bf -->
+        <test-method status="PASS" signature="ztest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="ztest" duration-ms="11" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ztest -->
+        <test-method status="PASS" signature="xtest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="xtest" duration-ms="9" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- xtest -->
+        <test-method status="PASS" signature="bf()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="bf" is-config="true" duration-ms="2" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bf -->
+        <test-method status="PASS" signature="subTest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="subTest" duration-ms="23" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subTest -->
+        <test-method status="PASS" signature="bf()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="bf" is-config="true" duration-ms="1" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bf -->
+        <test-method status="PASS" signature="ytest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="ytest" duration-ms="4" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ytest -->
+        <test-method status="PASS" signature="bf()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="bf" is-config="true" duration-ms="1" started-at="2018-09-12T18:38:55Z" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bf -->
+        <test-method status="PASS" signature="addTest()[pri:0, instance:mytest.NewTestNG@2038ae61]" name="addTest" duration-ms="7" started-at="2018-09-12T18:38:55Z" depends-on-methods="mytest.NewTestNG.ztest, mytest.NewTestNG.xtest" finished-at="2018-09-12T18:38:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTest -->
+      </class> <!-- mytest.NewTestNG -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

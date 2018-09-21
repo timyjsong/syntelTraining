@@ -1,0 +1,77 @@
+package bank;
+
+import java.util.Scanner;
+
+public class MyApp {
+	
+	public static void main(String s[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int custId;
+		String custName;
+		String custPhone;
+		String custCity;
+		
+		int accId;
+		double accBalance;
+		float interestRate;
+		
+		System.out.println("Would you like to enter a new customer? (yes/no)");
+		String custCreate = sc.next();
+		if(custCreate == "yes") {
+			System.out.println("Scan Customer Details . . .");
+			System.out.println("Scan ID . . .");
+			int custId = sc.nextInt();
+			
+			System.out.println("Scan Name . . .");
+			String custName = sc.next();
+			
+			System.out.println("Scan Phone . . .");
+			String custPhone = sc.next();
+			
+			System.out.println("Scan City . . .");
+			String custCity = sc.next();
+			
+			System.out.println("Scan Customer Account Details . . .");
+			System.out.println("Scan AccID . . .");
+			int accId = sc.nextInt();
+			
+			System.out.println("Scan Balance . . .");
+			double accBalance = sc.nextDouble();
+			
+			System.out.println("Scan Interest Rate . . .");
+			float interestRate = sc.nextFloat();
+		}
+			
+		
+		SavingAccount accountObject = new SavingAccount();		
+		Customer cust = new Customer();
+		
+	
+
+	
+		accountObject.storeAccountDetails(accId, accBalance, interestRate);
+		cust.storeCustomerDetails(custId, custName, custPhone, custCity, accountObject);
+		
+		cust.displayCustomerDetails();
+		
+		//-------------------TRANSACTION--------------------
+		System.out.println("-----TRANSACTION-----");
+		System.out.println("----LOGIN PROCESS----");
+		System.out.println("Enter Username:");
+		String username = sc.next();
+		System.out.println("Enter Password:");
+		String password = sc.next();
+		
+		if(MySecurity.isUserValid(username, password)) {
+			System.out.println("Withdraw $500 function check----");
+			TransactionServices tranServices = new TransactionServices();
+			tranServices.cashWithdraw(cust, 500);
+			cust.displayCustomerDetails();
+		}
+		else
+			System.out.println("LOGIN FAILED . . . . . .");
+		
+	}
+}

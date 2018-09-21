@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+	function fun()
+	{
+		var v = document.getElementById("esalary").value;
+		if(v>5000)
+			alert('Employee Has above 5000 salary');
+		else
+			alert('Employee has less than 5000 salary');
+	}
+</script>
+
+
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+</head>
+<body bgcolor="Khaki">
+
+<br>
+<bR>
+<center>
+	<hr size="4" color="blue"></hr>
+	
+	<br>
+		<h1>Welcome to Employee Management System</h1>
+	<br>
+	<form action="registration" method="post">
+		<table border="1" cellspacing="3" cellpadding="5">
+			<tr>
+				<td>Employee Id</td>
+				<td> <input id="eid" type="text" name="eid"/>
+			</tr>
+			<tr>
+				<td>Employee Name</td>
+				<td> <input id="ename" type="text" name="ename"/>
+			</tr>
+			
+			<tr>
+				<td>City</td>
+				<td><select multiple="multiple" id="ecity" name="ecity">
+					<option>Phoenix</option>
+					<option>Memphis</option>
+					<option>Nashville</option>
+					<option>N-York</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Salary</td>
+				<td><input id="esalary" type="number" name="esalary"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input id="submit" type="submit" onclick="javascript:fun()" value="Register"/>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<hr size="4" color="blue"></hr>
+	
+</body>
+</html>
